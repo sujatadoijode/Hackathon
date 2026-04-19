@@ -2,6 +2,7 @@ import { useState } from "react";
 import ReactFlow, { Background, Controls } from "reactflow";
 import "reactflow/dist/style.css";
 import "../styles/style.css";
+import "../styles/simulation.css";
 import BatteryNode from "./BatteryNode";
 import ConductorNode from "./ConductorNode";
 import ResistorNode from "./ResistorNode";
@@ -70,10 +71,10 @@ function Simulation() {
   return (
     <div style={{ marginBottom: "20px" }}>
       <h2>Battery–Conductor–Resistor Simulation</h2>
-      <label>Voltage: {voltage} V</label><br></br>
+      <label className="input-label">Voltage: {voltage} V</label><br></br>
       <input type="range" min="1" max="20" value={voltage} onChange={e => setVoltage(+e.target.value)} className="slider" />
       <br />
-      <label>Resistance: {resistance} Ω</label><br></br>
+      <label className="input-label">Resistance: {resistance} Ω</label><br></br>
       <input type="range" min="1" max="50" value={resistance} onChange={e => setResistance(+e.target.value)} className="slider" />
       <br />
       <button 

@@ -24,8 +24,8 @@ app.post("/api/chat", (req, res) => {
   if (message.toLowerCase().includes("current")) reply = "Current is the flow of charge, measured in amperes.";
   if (message.toLowerCase().includes("practical")) reply = "The Ohm's Law experiment is designed to verify the relationship between voltage (V), current (I), and resistance (R) in an electrical circuit."
   if (message.toLowerCase().includes("experiment")) reply = "The Ohm's Law experiment is designed to verify the relationship between voltage (V), current (I), and resistance (R) in an electrical circuit."
-  if (message.toLowerCase().includes("clear")) {
-    
+  if (message.toLowerCase().includes("explain me the experiment")) {
+    reply = "Sure! In this experiment, you adjust the voltage and resistance to observe how the current changes. It demonstrates Ohm's Law: I = V / R.";
   }
   res.json({ reply });
 });

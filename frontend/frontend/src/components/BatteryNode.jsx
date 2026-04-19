@@ -8,7 +8,7 @@ function BatteryNode({ data }) {
       borderRadius: "5px",
       width: "80px",
       height: "120px",
-      background: "linear-gradient(to bottom, #ff0000 50%, #000000 50%)",
+      background: "linear-gradient(to bottom, #ff0000 50%, #969696 50%)",
       display: "flex",
       flexDirection: "column",
       justifyContent: "center",

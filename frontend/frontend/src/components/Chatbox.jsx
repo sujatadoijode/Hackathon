@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "../styles/chatbox.css";
 
 function Chatbot() {
   const [messages, setMessages] = useState([]);
@@ -25,7 +26,7 @@ function Chatbot() {
   return (
     <div style={{ maxWidth: "600px" }}>
       <h3>AI Chatbot Guide</h3>
-      <div style={{ border: "1px solid #ccc", padding: "10px", height: "200px", overflowY: "auto", marginBottom: "10px" }}>
+      <div className="chatbox" style={{ border: "2px solid #000000", padding: "10px", height: "200px", overflowY: "auto", marginBottom: "10px" }}>
         {messages.map((m, i) => (
           <p key={i}>{m.user ? `You: ${m.user}` : `Bot: ${m.bot}`}</p>
         ))}
@@ -34,9 +35,10 @@ function Chatbot() {
         value={input}
         onChange={(e) => setInput(e.target.value)}
         style={{ width: "70%", padding: "5px" }}
+        className="chatbox-input"
         placeholder="Ask about voltage, resistance..."
       />
-      <button onClick={sendMessage} style={{ marginLeft: "10px", padding: "5px 10px" }}>
+      <button onClick={sendMessage} style={{ marginLeft: "10px", padding: "5px 10px" }} className="send-button">
         Send
       </button>
     </div>
