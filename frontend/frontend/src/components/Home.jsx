@@ -23,6 +23,7 @@ function Home() {
         and learn scientific concepts in real time. Built with MERN stack for rapid
         prototyping and hackathon demos.
       </p>
+
       <button
         style={{
           backgroundColor: "#00d0ff",
