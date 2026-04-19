@@ -24,13 +24,31 @@ function Chatbot() {
   };
 
   return (
-    <div style={{ maxWidth: "600px" }}>
-      <h3>AI Chatbot Guide</h3>
-      <div className="chatbox" style={{ border: "2px solid #000000", padding: "10px", height: "200px", overflowY: "auto", marginBottom: "10px" }}>
-        {messages.map((m, i) => (
-          <p key={i}>{m.user ? `You: ${m.user}` : `Bot: ${m.bot}`}</p>
-        ))}
+    <>
+    
+    <div style={{ display: "flex", justifyContent: "center", alignItems: "center", minHeight: "100vh" }}>
+  <div style={{ maxWidth: "600px", width: "100%" }}>
+    <div>
+      <h3 style={{ textAlign: "center" }}>AI Chatbot Guide</h3>
+      <p style={{ textAlign: "center", marginBottom: "20px" }}>
+      Ask me about voltage, resistance, or how experiments work — I’ll explain step by step!
+      </p>
       </div>
+    <div
+      className="chatbox"
+      style={{
+        border: "2px solid #000000",
+        padding: "10px",
+        height: "200px",
+        overflowY: "auto",
+        marginBottom: "10px"
+      }}
+    >
+      {messages.map((m, i) => (
+        <p key={i}>{m.user ? `You: ${m.user}` : `Bot: ${m.bot}`}</p>
+      ))}
+    </div>
+    <div style={{ display: "flex", justifyContent: "center" }}>
       <input
         value={input}
         onChange={(e) => setInput(e.target.value)}
@@ -38,10 +56,18 @@ function Chatbot() {
         className="chatbox-input"
         placeholder="Ask about voltage, resistance..."
       />
-      <button onClick={sendMessage} style={{ marginLeft: "10px", padding: "5px 10px" }} className="send-button">
+      <button
+        onClick={sendMessage}
+        style={{ marginLeft: "10px", padding: "5px 10px" }}
+        className="send-button"
+      >
         Send
       </button>
     </div>
+  </div>
+</div>
+</>
+
   );
 }
 
