@@ -3,8 +3,8 @@
     border-radius: 25px;
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
-    font-size: larger;
-    font-weight: 600;
+    font-size: medium;
+    font-weight: 300;
     box-shadow: 4px 2px 8px aqua;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
